@@ -1,24 +1,20 @@
 function whoWon(b){
-    for(i=0;i<b.length;i++){
-        for(j=0;j<b.length;j++){
-            if(b[i][j] == b[i][j+1] && b[i][j+1] == b[i][j+2]){
-                return b[i][j]
-            }
-            if(b[i][j] == b[i+1][j] && b[i+1][j] == b[i+2][j]){
-                return b[i][j]
-            }
-            if(b[i][j] == b[i+1][j+1] && b[i+1][j+1] == b[i+2][j+2]){
-                return b[i][j]
-            }
-            if(b[i+2][j+2] == b[i+1][j+1] && b[i+1][j+1] == b[i][j+2]){
-                return b[i][j]
-            }
-        }
+    t = b
+    for(i=0;i<t.length;i++){
+        if(t[i][0] == t[i][1] && t[i][1] == t[i][2]){return t[i][0]} 
+        if(t[0][i] == t[1][i] && t[1][i] == t[2][i]){return t[0][i]} 
     }
-    return "Tie"
+    if(t[0][0] == t[1][1] && t[1][1] == t[2][2]){return t[0][0]} 
+    if(t[0][2] == t[1][1] && t[1][1] == t[2][0]){return t[0][2]}
+    return "Tie" 
 }
 console.log(whoWon([
     ["X","O","B"],
     ["O","X","B"],
+    ["X","O","X"],
+]));
+console.log(whoWon([
+    ["X","O","B"],
+    ["O","O","B"],
     ["X","O","X"],
 ]));
