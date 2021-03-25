@@ -1,0 +1,10 @@
+Add Two String Numbers
+Balanced Words
+Bingo Check
+Rock, Paper, Scissors!
+Less or Equal
+Maximize the First Number
+pigLatin 3.0
+Simon Says
+Spoonerisms
+Tic-Tac-Toe
